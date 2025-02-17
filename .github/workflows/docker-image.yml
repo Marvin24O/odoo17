@@ -28,4 +28,4 @@ jobs:
         context: ./ # Directorio donde se encuentra el Dockerfile
         file: ./Odoo/Odoo17/Bintell/Dockerfile # Ruta del Dockerfile
         push: true # Esto enviará la imagen a Docker Hub
-        tags: marvinordo/odoo17:latest
+        tags: marvinordo/odoo17-1.0:latest

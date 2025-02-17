@@ -4,6 +4,7 @@ FROM odoo:17.0-20241029
 # Copia tus módulos personalizados de Odoo al contenedor
 COPY ./Odoo/Odoo17/Bintell/addons /mnt/extra-addons
 
+
 # Define las variables de entorno para la configuración
 ENV HOST=db-odoo17-Bintell-prueba
 ENV USER=odoo

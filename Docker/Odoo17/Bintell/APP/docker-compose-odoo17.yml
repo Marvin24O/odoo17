@@ -1,0 +1,32 @@
+services:
+  odoo17-Bintell:
+    container_name: odoo17-Bintell
+    image: odoo:17.0-20241029
+    #    user: root
+    ports:
+      - "8069:8069"
+      - "20008:8090" # live chat
+    tty: true
+    command: --
+   
+    environment:
+      - HOST=db-odoo17-Bintell-prueba
+      - USER=odoo
+      - PASSWORD=odoo
+    volumes:
+      - ./etc:/etc/odoo
+      - C:\Users\Marvin\Documents\Proyecto1\Odoo\Odoo17\Bintell\addons:/mnt/extra-addons
+
+      # Carpeta del firestore, volumen compartido
+      - ./data:/var/lib/odoo
+
+    networks:
+      - n8n-network
+    # depends_on:
+    #   - db-odoo
+    restart: always
+
+networks:
+  n8n-network:
+    external: true
+

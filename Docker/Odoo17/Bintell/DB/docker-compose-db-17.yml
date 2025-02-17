@@ -1,0 +1,24 @@
+services:
+  db-odoo17-Bintell-prueba:
+    image: postgres:16.4
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+
+    volumes:
+      - C:\Users\Marvin\Documents\Proyecto1\Docker\Odoo17\Bintell\DB\data:/var/lib/postgresql/data
+      - C:\Users\Marvin\Documents\Proyecto1\Docker\Odoo17\Bintell\DB\backups:/var/lib/postgresql/backup
+
+    restart: always
+    networks:
+      -  n8n-network
+
+networks:
+   n8n-network:
+    external: true
+
+

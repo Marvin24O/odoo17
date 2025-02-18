@@ -1,0 +1,17 @@
+# Establece tu nombre de usuario global para Git, utilizado en todos los commits
+git config --global user.name "Marvin Ordoñez"
+
+# Establece tu correo electrónico global para Git, utilizado en todos los commits
+git config --global user.email "marvin.ordonez@ujcv.edu.hn"
+
+# Asocia tu repositorio local con un repositorio remoto en GitHub. 
+# Este comando enlaza tu directorio local con el repositorio en GitHub para poder enviar cambios (push)
+git remote add origin https://github.com/Marvin24O/odoo17.git
+
+# Agrega todos los archivos modificados al área de preparación (staging area)
+# El punto (.) indica que se deben agregar todos los archivos nuevos, modificados y eliminados
+git add .
+
+# Realiza un commit con los cambios que has agregado al área de preparación.
+# El mensaje entre comillas describe el propósito del commit, como el primer commit en tu proyecto
+git commit -m "Primer commit de mi proyecto"

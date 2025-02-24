@@ -1,5 +1,5 @@
 # Usa la imagen base de Odoo 17.0 que mencionas
-FROM odoo
+FROM odoo:17.0-20241029
 
 # Copia tus módulos personalizados de Odoo al contenedor
 COPY ./Odoo/Odoo17/Bintell/addons /mnt/extra-addons
